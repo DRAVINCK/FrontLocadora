@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class BarcoService {
 
-  apiUrl = 'http://localhost:5230/Carro';
+  apiUrl = 'http://localhost:5230/onibus';
   constructor(private http: HttpClient) { }
   listar(): Observable<Barco[]> {
     const url = `${this.apiUrl}/listar`;

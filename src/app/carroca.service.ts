@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class CarrocaService {
 
-  apiUrl = 'http://localhost:5230/Carro';
+  apiUrl = 'http://localhost:5230/Carroca';
   constructor(private http: HttpClient) { }
   listar(): Observable<Carroca[]> {
     const url = `${this.apiUrl}/listar`;

@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class AviaoService {
 
-  apiUrl = 'http://localhost:5230/Carro';
+  apiUrl = 'http://localhost:5230/aviao';
   constructor(private http: HttpClient) { }
   listar(): Observable<Aviao[]> {
     const url = `${this.apiUrl}/listar`;

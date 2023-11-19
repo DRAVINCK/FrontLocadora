@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class VanService {
 
-  apiUrl = 'http://localhost:5230/Carro';
+  apiUrl = 'http://localhost:5230/van';
   constructor(private http: HttpClient) { }
   listar(): Observable<Van[]> {
     const url = `${this.apiUrl}/listar`;

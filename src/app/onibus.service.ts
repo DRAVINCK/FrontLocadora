@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class OnibusService {
 
-  apiUrl = 'http://localhost:5230/Carro';
+  apiUrl = 'http://localhost:5230/onibus';
   constructor(private http: HttpClient) { }
   listar(): Observable<Onibus[]> {
     const url = `${this.apiUrl}/listar`;
