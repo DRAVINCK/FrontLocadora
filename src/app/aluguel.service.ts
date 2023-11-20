@@ -37,3 +37,7 @@ export class AluguelService {
     return this.http.delete<string>(url, httpOptions);
   }
 }
+
+listarTodos(): Observable<Aluguel[]> {
+  return this.http.get<Aluguel[]>(`${this.apiUrl}/alugueis`);
+}
