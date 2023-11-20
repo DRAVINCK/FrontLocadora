@@ -39,5 +39,5 @@ export class AluguelService {
 }
 
 listarTodos(): Observable<Aluguel[]> {
-  return this.http.get<Aluguel[]>(`${this.apiUrl}/alugueis`);
+  return this.http.get<Aluguel[]>(`http://localhost:5230/alugueis`);
 }
