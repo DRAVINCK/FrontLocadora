@@ -37,3 +37,20 @@ export class AluguelComponent implements OnInit {
   }
 
 }
+
+alugueis: Aluguel[] = [];
+
+ngOnInit(): void {
+  this.tituloFormulario = 'Novo Aluguel';
+  this.formulario = new FormGroup({
+    id: new FormControl(null),
+    cliente: new FormControl(null),
+    clienteCpf: new FormControl(null),
+    veiculo: new FormControl(null),
+    veiculoPlaca: new FormControl(null)
+  });
+
+  this.aluguelService.listarTodos().subscribe(alugueis => {
+    this.alugueis = alugueis;
+  });
+}
