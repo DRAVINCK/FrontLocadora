@@ -38,6 +38,3 @@ export class AluguelService {
   }
 }
 
-listarTodos(): Observable<Aluguel[]> {
-  return this.http.get<Aluguel[]>(`${this.apiUrl}/alugueis`);
-}
