@@ -36,6 +36,23 @@
             </div>
           </div>
         </form>
+        <!-- aluguel.component.html -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>CPF do Cliente</th>
+              <th>Placa do Veículo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let aluguel of alugueis">
+              <td>{{ aluguel.Id }}</td>
+              <td>{{ aluguel.ClienteCpf }}</td>
+              <td>{{ aluguel.VeiculoPlaca }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
