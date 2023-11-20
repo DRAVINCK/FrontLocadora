@@ -35,6 +35,24 @@
               </div>
             </div>
           </div>
+          <div class="container">
+            <div class="row">
+              <div>
+                <button type="submit" class="btn btn-sm btn-outline-secondary">
+                  Salvar
+                </button>
+              </div>
+              <div class="pl-1">
+                <button type="button" class="btn btn-sm btn-light">Voltar</button>
+              </div>
+              <div class="pl-1">
+                <button type="button" class="btn btn-sm btn-outline-info" (click)="listarAlugueis()">Listar</button>
+              </div>
+              <div class="pl-1">
+                <button type="button" class="btn btn-sm btn-outline-danger" (click)="excluirAluguel(formulario.value.id)">Deletar</button>
+              </div>
+            </div>
+          </div>
         </form>
         <!-- aluguel.component.html -->
         <table class="table">
