@@ -15,25 +15,32 @@ import { VeiculoService } from 'src/app/veiculo.service';
 export class AluguelComponent implements OnInit {
   formulario: any;
   tituloFormulario: string = '';
+  alugueis: Aluguel[] = [];
+
   constructor(private aluguelService : AluguelService,
               private clientesService : ClienteService,
               private veiculoService : VeiculoService
               ){}
+
   ngOnInit(): void {
-      this.tituloFormulario = 'Novo Aluguel';
-      this.formulario = new FormGroup({
-        id: new FormControl(null),
-        cliente: new FormControl(null),
-        clienteCpf: new FormControl(null),
-        veiculo: new FormControl(null),
-        veiculoPlaca: new FormControl(null)
-      })
+    this.tituloFormulario = 'Novo Aluguel';
+    this.formulario = new FormGroup({
+      id: new FormControl(null),
+      cliente: new FormControl(null),
+      clienteCpf: new FormControl(null),
+      veiculo: new FormControl(null),
+      veiculoPlaca: new FormControl(null)
+    });
+
+    this.aluguelService.listarTodos().subscribe(alugueis => {
+      this.alugueis = alugueis;
+    });
   }
+  
   enviarFormulario(): void{
     const aluguel : Aluguel = this.formulario.value;
     this.aluguelService.cadastrar(aluguel).subscribe(result =>{
       alert('Aluguel cadastrado')
     })
   }
-
 }
